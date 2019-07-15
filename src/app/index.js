@@ -1,16 +1,29 @@
-import React from 'react';
-import pictureOfMe from './person.jpg';
-import './index.css';
+import React from "react";
+import { Header, Main, DropDown } from "./components";
+import "./index.scss";
+
+const LANGUAGES = [
+  { name: "English", code: "en" },
+  { name: "Lietuvių", code: "lt" }
+];
 
 function App() {
+  const [language, setLanguage] = React.useState(LANGUAGES[0].code);
+
+  const items = LANGUAGES.map(({ name, code }) => ({
+    children: name,
+    value: code
+  }));
+
+  const onChange = e => {
+    setLanguage(e.target.value);
+  };
+
   return (
-    <div>
-      <header className="Header">
-        <div className="Header--image">
-          <img src={pictureOfMe} alt="My headshot" />
-        </div>
-      </header>
-      <main>Main</main>
+    <div className="App">
+      <Header />
+      <DropDown items={items} onChange={onChange} />
+      <Main language={language} />
     </div>
   );
 }

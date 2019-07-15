@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap");
+@import url("./app/style/utils.scss");
+
+body {
+  font-family: "Roboto Slab", serif;
+  background: #333333;
+  color: #f4f4f4;
+  font-size: calc(16px + (24 - 16) * (100vw - 1000px) / (1200 - 200));
+  line-height: calc(16px + (24 - 16) * (100vw - 800px) / (1200 - 100));
+}

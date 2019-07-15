@@ -1,0 +1,33 @@
+.Header {
+  position: relative;
+  display: flex;
+  padding-bottom: 50px;
+
+  &--decoration {
+    position: absolute;
+    height: 50px;
+    width: 200px;
+    top: 150px;
+    transform: rotate(-25deg);
+    filter: invert(70%);
+  }
+
+  &--image {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: -30px;
+    margin-top: -25px;
+
+    img {
+      width: 100%;
+      filter: grayscale(70%);
+    }
+  }
+
+  &--title {
+    padding: 40px 80px;
+  }
+}
